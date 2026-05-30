@@ -13,6 +13,16 @@ AptiVerbal Pro is a placement preparation web app for aptitude, verbal, reasonin
 
 ## Run The App
 
+### Online
+
+Open this link on any phone or laptop:
+
+```text
+https://swetha12112005.github.io/AptiVerbal-Pro/
+```
+
+### Local
+
 ```bash
 node server.js
 ```
@@ -31,4 +41,3 @@ http://127.0.0.1:5173
 - Saved completed status in the browser.
 - Company-wise model papers for MNC placement preparation.
 - Round 1 written test, Round 2 technical MCQ, and Round 3 coding/interview practice.
-
