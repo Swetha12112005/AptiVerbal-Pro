@@ -1,0 +1,20 @@
+{
+  "name": "aptiverbal-pro",
+  "version": "1.0.0",
+  "description": "Placement preparation app with aptitude, verbal, reasoning, coding, company model papers, and interview practice.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "placement",
+    "aptitude",
+    "verbal",
+    "reasoning",
+    "coding",
+    "interview"
+  ],
+  "author": "Swetha",
+  "license": "MIT"
+}
+

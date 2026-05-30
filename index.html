@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AptiVerbal Pro | Aptitude, Reasoning, Math & Coding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav shell">
+            <a href="#home" class="brand">
+                <span class="brand-mark"><i class="fa-solid fa-graduation-cap"></i></span>
+                AptiVerbal Pro
+            </a>
+            <div class="nav-links">
+                <a href="#topics">Topics</a>
+                <a href="#company-papers">Company Papers</a>
+                <a href="#learn">Study & Quiz</a>
+                <a href="#progress">Progress</a>
+            </div>
+            <a class="btn btn-primary" href="#topics"><i class="fa-solid fa-play"></i> Start</a>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="hero-content shell">
+                <span class="eyebrow"><i class="fa-solid fa-bolt"></i> Aptitude, reasoning, math, coding</span>
+                <h1>Choose a topic, read the matter, and take a fresh quiz.</h1>
+                <p>Select Aptitude, Reasoning, Verbal, Coding Aptitude, or Placement Preparation. Every listed topic has study material, quiz questions, answer explanations, and saved attempts so the next visit gives another practice set.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#topics"><i class="fa-solid fa-layer-group"></i> Select Topic</a>
+                    <a class="btn btn-outline" href="#company-papers"><i class="fa-solid fa-building"></i> Company Papers</a>
+                    <a class="btn btn-outline" href="#learn"><i class="fa-solid fa-book-open"></i> Read Material</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="topics">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow" style="color: var(--teal);"><i class="fa-solid fa-table-cells-large"></i> Topic library</span>
+                        <h2>Select one area and then pick the exact topic to practice.</h2>
+                    </div>
+                    <p>The Aptitude section now includes number system, arithmetic, time-based problems, algebra, geometry, modern math, and data interpretation topics.</p>
+                </div>
+
+                <div class="category-tabs" id="categoryTabs"></div>
+                <div class="topic-grid" id="topicGrid"></div>
+            </div>
+        </section>
+
+        <section class="company-papers" id="company-papers">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow" style="color: var(--blue);"><i class="fa-solid fa-building"></i> Company model papers</span>
+                        <h2>Practice company-wise written tests, technical MCQs, coding, and interview rounds.</h2>
+                    </div>
+                    <p>Each model paper uses original practice questions based on common MNC placement patterns, with question count and time limit shown clearly.</p>
+                </div>
+                <div class="company-grid" id="companyGrid"></div>
+            </div>
+        </section>
+
+        <section class="learn-practice" id="learn">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow" style="color: var(--coral);"><i class="fa-solid fa-pen-to-square"></i> Study and quiz</span>
+                        <h2 id="selectedTitle">Percentages</h2>
+                    </div>
+                    <p id="selectedSubtitle">Read the concept first, then attempt the quiz. Explanations appear after each answer.</p>
+                </div>
+
+                <div class="workspace">
+                    <article class="panel material">
+                        <span class="pill" id="selectedCategory"><i class="fa-solid fa-tag"></i> Aptitude</span>
+                        <h2 id="materialTitle">Percentages</h2>
+                        <p class="summary" id="materialSummary"></p>
+
+                        <div class="matter-box">
+                            <h3>Topic Matter</h3>
+                            <p id="materialMatter"></p>
+                        </div>
+
+                        <div class="formula-box">
+                            <h3>Important Points</h3>
+                            <ul id="materialPoints"></ul>
+                        </div>
+
+                        <div class="example-box">
+                            <h3>Example Based On Quiz</h3>
+                            <p id="materialExample"></p>
+                        </div>
+
+                        <div class="interview-box">
+                            <h3>Interview Question References</h3>
+                            <ul id="interviewList"></ul>
+                        </div>
+                    </article>
+
+                    <article class="panel quiz-panel">
+                        <div class="quiz-top">
+                            <span class="pill" id="quizSetBadge"><i class="fa-solid fa-rotate"></i> Quiz Set 1</span>
+                            <span class="pill" id="quizCounter">Question 1 / 1</span>
+                        </div>
+                        <div class="progress-line">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="question-nav" id="questionNav"></div>
+                        <h3 id="questionText"></h3>
+                        <div class="options" id="optionsList"></div>
+                        <div class="question-source" id="questionSource"></div>
+                        <div class="explanation" id="explanationBox"></div>
+                        <div class="quiz-actions">
+                            <button class="btn btn-primary" id="checkBtn"><i class="fa-solid fa-circle-check"></i> Check Answer</button>
+                            <button class="btn btn-outline" id="prevBtn"><i class="fa-solid fa-arrow-left"></i> Previous Question</button>
+                            <button class="btn btn-outline" id="nextBtn"><i class="fa-solid fa-arrow-right"></i> Next Question</button>
+                            <button class="btn btn-outline" id="submitBtn"><i class="fa-solid fa-paper-plane"></i> Submit Quiz</button>
+                            <button class="btn btn-outline" id="restartBtn"><i class="fa-solid fa-rotate-left"></i> Start Again</button>
+                        </div>
+                        <div class="result-box" id="resultBox"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard" id="progress">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow"><i class="fa-solid fa-chart-line"></i> Saved progress</span>
+                        <h2>Your completed quiz count is saved in this browser.</h2>
+                    </div>
+                    <p>When a topic is completed once, the next opening of the website shows the next quiz set for that same topic.</p>
+                </div>
+                <div class="stat-grid">
+                    <div class="stat"><span>Current Category</span><strong id="statCategory">Aptitude</strong></div>
+                    <div class="stat"><span>Current Topic</span><strong id="statTopic">Percentages</strong></div>
+                    <div class="stat"><span>Completed Attempts</span><strong id="statAttempts">0</strong></div>
+                    <div class="stat"><span>Next Quiz Set</span><strong id="statQuizSet">1</strong></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner shell">
+            <span>AptiVerbal Pro</span>
+            <span>Topic matter, quizzes, and explanations for placement preparation.</span>
+        </div>
+    </footer>
+    <script src="data/question-data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
+
+
